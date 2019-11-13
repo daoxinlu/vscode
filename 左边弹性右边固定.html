@@ -1,0 +1,39 @@
+<div class="container">
+　　<div class="main">main</div>
+　　<div class="left">left</div>
+　　<div class="right">right</div>
+</div>
+<style>
+  .main,.left,.right{
+    min-height:100px;
+    float:left;
+    position:relative;
+    text-align:center;
+    line-height:100px;
+    font-size:20px;
+    font-weight:bold;
+    font-family:LiSu;
+    border-radius:20px;
+  }
+  .main{
+    background-Color:red;
+    width:100%;
+  }
+  .left{
+    left:-200px;
+    margin-left:-100%;
+    background-Color:green;
+    width:200px;
+  }
+  .right{
+    right:-300px;
+    margin-left:-300px;
+    background:yellow;
+    width:300px;
+  }
+  .container{
+    padding:0 300px 0 200px;
+  }
+  body{
+    background-color:lightgrey;
+  }

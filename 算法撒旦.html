@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         #div1{
+            width:200px;height:200px;background-color:green;
+         }
+         input{
+             background-color:red;
+         }
+    </style>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div id="div1" style="backgroundColor:white;height:100px">div2</div>
+</body>
+<script>
+        function create(){
+            var div = document.createElement("div");
+            var divattr = document.createAttribute("class");
+            divattr.value = "test";
+            div.setAttributeNode(divattr);
+
+            var input = document.createElement("input");
+            var inputattr = document.createAttribute("type");
+            inputattr.value = "button";
+            input.setAttributeNode(inputattr);
+            var img = document.createElement("img");
+            img.src = "http://b.hiphotos.baidu.com/image/h%3D300/sign=92afee66fd36afc3110c39658318eb85/908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg";
+            var imgstyle = document.createAttribute("style");
+            img.setAttributeNode(imgstyle);
+            img.style.width = "300px";
+            img.style.height= "200px";
+            img.style.display = "block";
+            img.style.margin = "0 auto";
+            img.style.positon = "relative";
+            img.style.marginTop = "25%";
+
+            div.appendChild(input);
+            div.appendChild(img);
+
+            //为div设置样式
+            var style = document.createAttribute("style");
+            div.setAttributeNode(style);
+            div.style.backgroundColor = "red";
+            div.style.borderWidth = "20px";
+            div.style.borderColor = "green";
+            div.style.width = "500px";
+            div.style.height = "500px";
+            div.style.marginLeft = "20%";
+
+
+            document.body.appendChild(div);
+
+        }
+        create();
+</script>
+</html>

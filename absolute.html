@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<select id="select">
+  <option>Volvo</option>
+  <option selected="selected">Saab</option>
+  <option>Mercedes</option>
+  <option>Audi</option>
+</select>
+<script>
+	var sel = document.getElementById("select");
+  var op = sel.children;
+  console.log(op);
+  for(item in op){
+    if(op[item].selected){
+      console.log(op[item].innerHTML);
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+    <link href="jqcss.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="div1"><input type="radio" id ="input1" onclick='check(this)' />单选按钮1</div>
+
+    <script>
+        // var div = document.getElementById("div1");
+        // var radio = document.getElementById("input1");
+        // var count=0;
+        // radio.onclick= (function(e){
+            
+        //     console.log(count);
+        //     count++;
+        //     if(count%2===0){
+        //         radio.checked=false;
+        //     }else{
+        //         radio.checked=true;
+        //     }
+            
+        // })
+        // div.addEventListener("click",function(event){
+        //     var radio = document.getElementById("input1");
+        //     radio.checked === true? radio.checked=false:radio.checked=true;
+        //     // if(radio.checked == true){
+        //     //     radio.checked = false;
+                
+        //     // }else{
+        //     //     radio.checked = true;
+                
+        //     // }   
+        //     console.log(radio.checked);
+        //     event.stopPropagation();
+        // });
+        
+
+
+
+    $("input").val(["radio2","check2"]);
+    $("select").val(["1","3"]);
+    $(function(){
+                
+    });
+    var tempradio= null;
+    function check(checkedRadio)
+    {
+        
+        if(tempradio== checkedRadio){
+            tempradio.checked=false;
+            tempradio=null;
+        }
+        else{
+            tempradio= checkedRadio;
+        }
+        console.log(checkedRadio.checked);
+    }
+    /*function setSelectUserNo(radioObj){
+            
+        var radioCheck= $(radioObj).val();
+        if("1"==radioCheck){
+            $(radioObj).attr("checked",false);
+            $(radioObj).val("0");
+            
+        }else{ 
+            $(radioObj).val("1");
+            
+        }
+    }*/
+
+        /*function check(){
+            if(this.checked==true){return this.checked=false;}
+            else
+                {return this.checked=true;}
+        }*/
+    </script>
+    <!-- <input type="radio" value="radio2" />单选按钮2
+    <input type="checkbox" value="check1" />复选按钮1
+    <input type="checkbox" value="check2" />复选按钮2
+    <select multiple="multiple">
+        <option value="1">萝卜</option>
+        <option value="2">青菜</option>
+        <option value="3">各有所爱</option>
+    </select>
+    <style>
+        li{
+            font-size:40px;
+        }
+    </style> -->
+</body>
+</html>
