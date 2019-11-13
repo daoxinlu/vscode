@@ -1,0 +1,5 @@
+*.a
+/TODO
+build/
+.pdf
+.txt
